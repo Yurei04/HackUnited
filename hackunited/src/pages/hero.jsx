@@ -1,8 +1,6 @@
 "use client"
 
 import React from "react";
-import Image from "next/image";
-import { TypeAnimation } from "react-type-animation";
 import { Input } from "@/components/ui/input"
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -39,28 +37,28 @@ const data = {
             id: 1,
             title: "Hack United III",
             des: "Et fugiat id amet deserunt eiusmod excepteur ea aliquip veniam exercitation id ea nisi do.",
-            style: "w-[400px] h-auto -rotate-10 rounded-4xl"
+            style: "w-[400px] h-auto -rotate-10 rounded-4xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5"
         },
         {
             id: 2,
             title: "Hack United V",
             des: "Et fugiat id amet deserunt eiusmod excepteur ea aliquip veniam exercitation id ea nisi do.",
-            style: "w-[400px] h-auto rounded-4xl"
+            style: "w-[400px] h-auto rounded-4xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5"
 
         },
         {
             id: 3,
             title: "Hack United IV",
             des: "Et fugiat id amet deserunt eiusmod excepteur ea aliquip veniam exercitation id ea nisi do.",
-            style: "w-[400px] h-auto rotate-10 rounded-4xl"
+            style: "w-[400px] h-auto rotate-10 rounded-4xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5"
         },
     ]
 }
 
 export default function Hero () {
     return (
-        <div className="flex flex-col items-center justify-center w-full h-screen p-1 m-1 overflow-x-hidden ">
-            <div className="flex flex-col justify-center text-center gap-10 ">
+        <div className="flex flex-col items-center justify-center w-full min-h-screen -mt-15 lg:pt-0 sm:pt-18">
+            <div className="flex flex-col text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -68,7 +66,7 @@ export default function Hero () {
                     className="flex flex-col gap-5"
                 >
                     <div className="flex justify-center items-center">
-                        <Card className="rounded-2xl  p-0 bg-purple-500 opacity-70 text-shadow-purple-500">
+                        <Card className="border border-purple-500 text-purple-400 bg-transparent rounded-4xl p-0">
                             <CardContent>
                                 Something Something
                             </CardContent>
@@ -101,7 +99,7 @@ export default function Hero () {
                             <Button type="submit">Subscribe</Button>
                         </div>
                     </div>
-                    <div className="flex flex-row items-center gap-5 sm:flex-row">
+                    <div className="flex flex-col sm:flex-row sm:justify-center flex-wrap gap-6 p-4 max-w-screen-xl mx-auto">
                         {data.dataCard.map((card) => (
                             <Card key={card.id} className={card.style}>
                                 <CardHeader>
@@ -117,29 +115,23 @@ export default function Hero () {
                                         <Link href="#">Lets Go</Link>
                                     </Button>
                                     <Dialog>
-                                        <DialogTrigger>
-                                            Details
-                                        </DialogTrigger>
-                                         <DialogContent>
+                                        <DialogTrigger>Details</DialogTrigger>
+                                        <DialogContent>
                                             <DialogHeader>
                                                 <DialogTitle>{card.diaTitle}</DialogTitle>
-                                                <DialogDescription>
-                                                    {card.diaDes}
-                                                </DialogDescription>
+                                                <DialogDescription>{card.diaDes}</DialogDescription>
                                             </DialogHeader>
-                                            <DialogFooter className="sm:justify-start">
-                                                <DialogClose asChild>
-                                                    <Button type="button">
-                                                        Close
-                                                    </Button>
-                                                </DialogClose>
-                                            </DialogFooter>
+                                                <DialogFooter className="sm:justify-start">
+                                                    <DialogClose asChild>
+                                                        <Button type="button">Close</Button>
+                                                    </DialogClose>
+                                                </DialogFooter>
                                         </DialogContent>
                                     </Dialog>
                                 </CardContent>
-                            </Card>                           
+                            </Card>
                         ))}
-                    </div>
+                        </div>
                 </motion.div>
             </div>
         </div>
