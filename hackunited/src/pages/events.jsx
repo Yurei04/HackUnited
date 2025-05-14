@@ -120,6 +120,7 @@ export default function Events () {
 
     return (
         <div className="flex flex-col w-full min-h-screen mt-10">
+                        <Separator orientation="horizontal" className="mx-2 data-[orientation=vertical]:h-4 bg-purple-700 m-5"/>
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -143,7 +144,7 @@ export default function Events () {
                 {current.currentEvent.map((event) => (
                     <Card
                     key={event.id}
-                    className="isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 p-6 max-w-4xl mx-auto"
+                    className="border border-purple-700 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 p-6 max-w-4xl mx-auto"
                     >
                         <CardHeader>
                             <CardTitle className="text-purple-400 text-2xl flex items-center gap-2">
@@ -219,7 +220,7 @@ export default function Events () {
                 ))}
             </div>
 
-            <Separator orientation="horizontal" className="mx-2 data-[orientation=vertical]:h-4 bg-purple-500" />
+            <Separator orientation="horizontal" className="mx-2 data-[orientation=vertical]:h-4 bg-purple-700" />
             <div>
                 <h1 className="text-4xl sm:text-5xl lg:text-8xlr flex flex-row gap-5 text-center items-center justify-center">
                     <span className="text-transparent bg-clip-text text-5xl bg-gradient-to-r from-gray-400 to-purple-500">
@@ -230,7 +231,7 @@ export default function Events () {
 
             <div className="flex lg:flex-row sm:flex-col flex-1/4 justify-between m-5">
                 {chartData.dataset.map((cards) => (
-                    <Card className="rounded-4xl isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5 sm:m-5">
+                    <Card className="rounded-4xl border border-purple-700 isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5 sm:m-5">
                         <CardHeader>
                             <CardTitle className="text-purple-400 text-2xl flex items-center gap-2">
                             <Sparkles className="text-purple-300 h-5 w-5" />
