@@ -64,7 +64,7 @@ const chartData = {
         devpost: "https://unitedhacks23.devpost.com/"
     },
          {
-        id: 2,
+        id: 3,
         title: "United Hacks V1",
         date: "August, 2023",
         theme: "Mental Health Theme",
@@ -79,7 +79,7 @@ const chartData = {
         devpost: "https://unitedhacks23.devpost.com/"
     },
          {
-        id: 2,
+        id: 4,
         title: "United Hacks V1",
         date: "August, 2023",
         theme: "Mental Health Theme",
@@ -167,7 +167,7 @@ export default function Events () {
                                     </p>
 
                                     <p className="flex items-center gap-2">
-                                    <Users className="h-5 w-5 text-purple-300" />
+                                    <Users className="h-5 w-5 text-purple-300 " />
                                     <strong>Category:</strong> {event.category}
                                     </p>
 
@@ -232,7 +232,7 @@ export default function Events () {
 
             <div className="flex lg:flex-row sm:flex-col flex-1/4 justify-between m-5">
                 {chartData.dataset.map((cards) => (
-                    <Card className="rounded-4xl border hover:border-purple-500 isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5 sm:m-5">
+                    <Card  key={cards.id} className="rounded-4xl border hover:border-purple-500 isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5 sm:m-5">
                         <CardHeader>
                             <CardTitle className="text-purple-400 text-2xl flex items-center gap-2">
                             <Sparkles className="text-purple-300 h-5 w-5" />
@@ -281,6 +281,7 @@ export default function Events () {
                             <Button
                                 className="bg-purple-800 hover:bg-purple-700 text-white flex items-center gap-2"
                                 onClick={() => window.open(cards.devpost, "_blank")}
+                                variant={"outline"}
                             >
                                 <Link2 className="h-4 w-4" />
                                 Devpost <ArrowRight className="h-4 w-4" />

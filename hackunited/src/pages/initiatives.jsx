@@ -44,7 +44,7 @@ const initiatives = [
 function InitiativeCard({ title, icon, items }) {
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-      <Card className="max-w-sm isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500">
+      <Card className="max-w-sm  isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500">
         <CardContent className="p-10">
           <h2 className="text-3xl flex flex-row gap-4 items-center mb-4">
             {icon}
