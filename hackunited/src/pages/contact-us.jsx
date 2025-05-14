@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -34,6 +35,18 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center  p-6">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          bounce: 0.2,
+          delay: 0.1,
+        }}
+        viewport={{ once: true, amount: 0.1 }}
+        className="w-full"
+      >
       <form
         onSubmit={handleSubmit}
         className="bg-black/60 backdrop-blur-lg border border-purple-800 shadow-lg p-8 rounded-2xl w-full max-w-xl space-y-6"
@@ -124,6 +137,7 @@ export default function ContactPage() {
           Contact
         </Button>
       </form>
+      </motion.div>
     </div>
   );
 }

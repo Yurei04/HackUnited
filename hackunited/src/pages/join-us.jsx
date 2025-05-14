@@ -1,10 +1,22 @@
 "use client"
-
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function JoinUs () {
     return (
         <div className="flex flex-col w-full h-screen">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                duration: 0.8,
+                type: "spring",
+                bounce: 0.2,
+                delay: 0.1,
+                }}
+                viewport={{ once: true, amount: 0.1 }}
+                className="w-full"
+            >
             <div className="flex flex-col items-center justify-center">
                 <div>
                     <h1 className="text-4xl sm:text-5xl lg:text-8xlr flex flex-row gap-5 items-center justify-center">
@@ -27,8 +39,7 @@ export default function JoinUs () {
                 </Card>
                 </div>
             </div>
-           
-
+            </motion.div>
         </div>
     )
 }
