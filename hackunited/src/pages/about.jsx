@@ -6,7 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function About () {
     return (
-        <div className="w-full h-screen p-1 flex lg:flex-row sm:flex-col items-center justify-center sm:mt-25">
+        <div className="w-full min-h-screen p-1 flex lg:flex-row sm:flex-col items-center justify-center sm:mt-25">
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -28,14 +29,18 @@ export default function About () {
                         </h1>
                     </div>
                     <div>
-                        <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-[#181818] overflow-hidden">
-                        <Image
-                            src="/images/workableB.png"
-                            alt="HackUnited Logo"
-                            layout="fill"
-                            objectFit="cover"
-                        />
-                        </div>
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.5 }}
+                            className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-[#181818] overflow-hidden"
+                        >
+                            <Image
+                                src="/images/HackUnited2.png"
+                                alt="HackUnited Logo"
+                                layout="fill"
+                                objectFit="cover"
+                            />
+                        </motion.div>
                     </div>
                 </div>
                 <Card className="text-justify p-5 isolate aspect-video lg:w-[60%] sm:w-[100%] rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5">

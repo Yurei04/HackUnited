@@ -78,7 +78,7 @@ export default function Hero () {
                                 Hack United {" "} 
                             </span>
                             <Avatar>
-                                <AvatarImage src="#" alt="@UH" />
+                                <AvatarImage src="/images/HackUnited2.png" alt="@UH" />
                                 <AvatarFallback>UH</AvatarFallback>
                             </Avatar>
                         </h1>
@@ -104,7 +104,7 @@ export default function Hero () {
                             <Card key={card.id} className={card.style}>
                                 <CardHeader>
                                     <Avatar>
-                                        <AvatarImage src="#" alt="@UH" />
+                                        <AvatarImage src="/images/HackUnited2.png" alt="@UH" />
                                         <AvatarFallback>UH</AvatarFallback>
                                     </Avatar>
                                     <CardTitle>{card.title}</CardTitle>
