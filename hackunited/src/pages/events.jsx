@@ -120,8 +120,8 @@ export default function Events () {
 
     return (
         <div className="flex flex-col w-full min-h-screen mt-10">
-                        <Separator orientation="horizontal" className="mx-2 data-[orientation=vertical]:h-4 bg-purple-700 m-5"/>
-        <motion.div
+        <Separator orientation="horizontal" className="mx-2 data-[orientation=vertical]:h-4 bg-purple-700 m-5"/>
+            <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
@@ -130,9 +130,10 @@ export default function Events () {
                 bounce: 0.2,
                 delay: 0.1,
             }}
-            viewport={{ once: true, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="flex flex-1 flex-col gap-4 p-4 pt-0"
-        >
+            >
+
             <div>
                 <h1 className="text-4xl sm:text-5xl lg:text-8xlr flex flex-row gap-5 items-center justify-center">
                     <span className="text-transparent bg-clip-text text-6xl bg-gradient-to-r from-gray-400 to-purple-500">

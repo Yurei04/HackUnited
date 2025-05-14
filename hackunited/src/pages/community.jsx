@@ -47,7 +47,7 @@ export default function CommunityStats() {
   }, [])
 
   return (
-    <div className="flex flex-wrap w-full h-3/6 justify-center gap-6 p-6" ref={containerRef}>
+    <div className="flex flex-wrap w-full h-3/6 justify-center gap-6 p-6 " ref={containerRef}>
       {chartData.dataset.map((data) => {
         const numString = data.value.toLocaleString() + "+"
         return (
