@@ -119,8 +119,7 @@ const current = {
 export default function Events () {
 
     return (
-        <div className="flex flex-col w-full min-h-screen mt-10">
-        <Separator orientation="horizontal" className="mx-2 data-[orientation=vertical]:h-4 bg-purple-700 m-5"/>
+        <div className="flex flex-col w-full min-h-screen mt-20">
             <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -221,8 +220,7 @@ export default function Events () {
                 ))}
             </div>
 
-            <Separator orientation="horizontal" className="mx-2 data-[orientation=vertical]:h-4 bg-purple-700" />
-            <div>
+            <div className="mt-20">
                 <h1 className="text-4xl sm:text-5xl lg:text-8xlr flex flex-row gap-5 text-center items-center justify-center">
                     <span className="text-transparent bg-clip-text text-5xl bg-gradient-to-r from-gray-400 to-purple-500">
                         Check Out Our Previous Hackathons!
@@ -230,11 +228,12 @@ export default function Events () {
                 </h1>
             </div>
 
-            <div className="flex lg:flex-row sm:flex-col flex-1/4 justify-between m-5">
+            <div className="flex lg:flex-row sm:flex-col flex-1/4 items-center justify-center">
                 {chartData.dataset.map((cards) => (
-                    <Card  key={cards.id} className="rounded-4xl border hover:border-purple-500 isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5 sm:m-5">
+                      console.log("Rendering card:", cards.title),
+                    <Card key={cards.id} className="rounded-4xl border hover:border-purple-500 isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5 sm:m-5">
                         <CardHeader>
-                            <CardTitle className="text-purple-400 text-2xl flex items-center gap-2">
+                            <CardTitle className="text-purple-400 text-xl flex items-center gap-2">
                             <Sparkles className="text-purple-300 h-5 w-5" />
                             {cards.title}
                             </CardTitle>
@@ -244,9 +243,9 @@ export default function Events () {
                             </p>
                             <p className="text-sm text-purple-300">{cards.theme}</p>
                         </CardHeader>
-                        <CardContent className="space-y-2">
+                        <CardContent className="space-y-2 text-sm">
                             <p className="flex items-center gap-2">
-                            <Users className="h-4 w-4 text-purple-300" />
+                            <Users className="h-3 w-3 text-purple-300" />
                             <strong>Participants:</strong> {cards.participats}
                             </p>
                             <p className="flex items-center gap-2">

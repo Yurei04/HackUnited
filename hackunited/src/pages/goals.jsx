@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Goals () {
     return (
-        <div className="flex flex-col w-full min-h-screen">
+        <div className="flex flex-col w-full min-h-screen mt-20">
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

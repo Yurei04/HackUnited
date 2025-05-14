@@ -8,7 +8,6 @@ import { Separator } from "@/components/ui/separator";
 export default function About () {
     return (
         <div className="w-full min-h-screen p-1 flex lg:flex-col sm:flex-col items-center justify-center sm:mt-25">
-            <Separator orientation="horizontal" className="mx-2 data-[orientation=vertical]:h-4 bg-purple-700" />
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -45,17 +44,16 @@ export default function About () {
                         </motion.div>
                     </div>
                 </div>
-                <Card className="text-justify p-5 isolate aspect-video lg:w-[60%] sm:w-[100%]  rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 hover:border-purple-500">
+                <Card className="text-justify p-5 isolate aspect-video lg:w-[50%] sm:w-[90%]  rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 hover:border-purple-500">
                     <CardContent>
                         <h1 className="text-xs sm:text-5xl lg:text-8xlr">
-                            <span id="letters" className="text-transparent bg-clip-text text-xl bg-gradient-to-r from-purple-300 to-purple-200">
+                            <span id="letters" className="text-transparent bg-clip-text text-base bg-gradient-to-r from-purple-300 to-purple-200">
                                 Hack United is a 501(c)(3) non-profit organization founded by teenagers with a passion for programming and technology. Our mission is to inspire and educate the next generation of innovators through hackathons and workshops. We address a problem not as commonly talked about, aiming to equip high school and college students with the essential soft skills needed to thrive in their chosen career paths. This is done through hands on application such as our free to enter hackathons. Through our initiatives, we ultimately aim to help students prosper in the realm of technology.
                             </span>
                         </h1>
                     </CardContent>
                 </Card>
             </motion.div>
-            <Separator orientation="horizontal" className="mx-2 data-[orientation=vertical]:h-4 bg-purple-700" />
         </div>
     )
 }

@@ -52,7 +52,7 @@ function InitiativeCard({ title, icon, items }) {
               {title}
             </span>
           </h2>
-          <Separator orientation="horizontal" className="bg-purple-700 my-4" />
+          <Separator orientation="horizontal" className="bg-purple-700 my-4 w-[50%]" />
           <ul className="space-y-2">
             {items.map((item, index) => (
               <li

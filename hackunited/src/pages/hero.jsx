@@ -37,20 +37,20 @@ const data = {
             id: 1,
             title: "Hack United III",
             des: "Et fugiat id amet deserunt eiusmod excepteur ea aliquip veniam exercitation id ea nisi do.",
-            style: "w-[400px] h-auto -rotate-10 rounded-4xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5"
+            style: "w-[400px] h-auto -rotate-10 rounded-4xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 hover:border-purple-500"
         },
         {
             id: 2,
             title: "Hack United V",
             des: "Et fugiat id amet deserunt eiusmod excepteur ea aliquip veniam exercitation id ea nisi do.",
-            style: "w-[400px] h-auto rounded-4xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5"
+            style: "w-[400px] h-auto rounded-4xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 hover:border-purple-500"
 
         },
         {
             id: 3,
             title: "Hack United IV",
             des: "Et fugiat id amet deserunt eiusmod excepteur ea aliquip veniam exercitation id ea nisi do.",
-            style: "w-[400px] h-auto rotate-10 rounded-4xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5"
+            style: "w-[400px] h-auto rotate-10 rounded-4xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 hover:border-purple-500"
         },
     ]
 }
@@ -66,7 +66,7 @@ export default function Hero () {
                     className="flex flex-col gap-5"
                 >
                     <div className="flex justify-center items-center">
-                        <Card className="border border-purple-500 text-purple-400 bg-transparent rounded-4xl p-0">
+                        <Card className="border border-purple-500  text-purple-400 bg-transparent rounded-4xl p-0">
                             <CardContent>
                                 Something Something
                             </CardContent>

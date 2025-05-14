@@ -53,7 +53,7 @@ export default function CommunityStats() {
         return (
           <Card
             key={data.id}
-            className="w-64 bg-black/60 text-white border hover:border-purple-500 shadow-xl rounded-3xl justify-center text-center"
+            className="w-64 bg-black/60 backdrop-blur-lg border border-purple-800 shadow-lg hover:border-purple-500 rounded-3xl justify-center text-center"
           >
             <CardHeader className="items-center">
               <CardTitle className="text-lg text-purple-300">{data.title}</CardTitle>
