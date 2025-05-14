@@ -19,7 +19,7 @@ export default function About () {
                     delay: 0.1,
                 }}
                 viewport={{ once: true, amount: 0.6 }}
-                className="flex lg:flex-row sm:flex-col gap-10 p-5 items-center justify-center"
+                className="flex lg:flex-row sm:flex-col gap-10 p-5 items-center justify-center "
             >
                 
                 <div className="flex flex-col gap-5">
@@ -45,7 +45,7 @@ export default function About () {
                         </motion.div>
                     </div>
                 </div>
-                <Card className="text-justify p-5 isolate aspect-video lg:w-[60%] sm:w-[100%]  rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5">
+                <Card className="text-justify p-5 isolate aspect-video lg:w-[60%] sm:w-[100%]  rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 hover:border-purple-500">
                     <CardContent>
                         <h1 className="text-xs sm:text-5xl lg:text-8xlr">
                             <span id="letters" className="text-transparent bg-clip-text text-xl bg-gradient-to-r from-purple-300 to-purple-200">

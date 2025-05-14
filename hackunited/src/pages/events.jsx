@@ -145,7 +145,7 @@ export default function Events () {
                 {current.currentEvent.map((event) => (
                     <Card
                     key={event.id}
-                    className="border border-purple-700 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 p-6 max-w-4xl mx-auto"
+                    className="border hover:border-purple-500 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 p-6 max-w-4xl mx-auto"
                     >
                         <CardHeader>
                             <CardTitle className="text-purple-400 text-2xl flex items-center gap-2">
@@ -232,7 +232,7 @@ export default function Events () {
 
             <div className="flex lg:flex-row sm:flex-col flex-1/4 justify-between m-5">
                 {chartData.dataset.map((cards) => (
-                    <Card className="rounded-4xl border border-purple-700 isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5 sm:m-5">
+                    <Card className="rounded-4xl border hover:border-purple-500 isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5 sm:m-5">
                         <CardHeader>
                             <CardTitle className="text-purple-400 text-2xl flex items-center gap-2">
                             <Sparkles className="text-purple-300 h-5 w-5" />
