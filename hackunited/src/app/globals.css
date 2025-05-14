@@ -218,3 +218,39 @@ body::before {
     @apply bg-background text-foreground;
   }
 }
+.img-group-container {
+  height: 500vh;
+  position: relative;
+}
+
+.img-group-container > div {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.img-group {
+  display: flex;
+}
+
+.img-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #9911ff;
+  bottom: 50px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
