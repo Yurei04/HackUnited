@@ -12,7 +12,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
+
+import { Button } from "@/components/ui/button";
 
 
 
@@ -24,7 +26,7 @@ const components = [
     },
     {
         title: "Donate",
-        href: "#",
+        href: "/donate",
         description: "Support the cause by donating. Every contribution helps us grow and assist others.",
     },
     {
@@ -56,11 +58,15 @@ export default function NavBar() {
         <NavigationMenuList className="flex gap-3">
             
             <NavigationMenuItem>
-                <NavigationMenuLink
-                className=" border text-purple-200 bg-transparent hover:border-purple-500 rounded-full px-4 py-2 transition-colors"
-                >
+                <div className="ml-auto flex items-center gap-2">
+                <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
+                    <Link
+                    href="/"
+                    className="dark:text-foreground text-purple-200">
                     Home
-                </NavigationMenuLink>
+                    </Link>
+                </Button>
+                </div>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
