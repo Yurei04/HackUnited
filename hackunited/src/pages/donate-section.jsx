@@ -1,4 +1,4 @@
-export default function Apply () {
+export default function DonateSection () {
     return (
         <>
         </>

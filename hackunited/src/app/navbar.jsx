@@ -34,7 +34,7 @@ const components = [
     },
     {
         title: "Apply",
-        href: "#",
+        href: "/apply",
         description: "Explore libraries and tools designed to support your career journey and job search.",
     },
     {
