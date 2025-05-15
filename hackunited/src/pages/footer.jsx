@@ -9,7 +9,7 @@ export default function Footer() {
             <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-600">
             HackUnited
             </h2>
-            <p className="text-sm text-purple-400">Hack United is fiscally sponsored by Hack Club Bank</p>
+            <p className="text-sm text-purple-400">Hack United is fiscally sponsored by Hack Club Bank<br/> a project by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</p>
         </div>
 
         <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">

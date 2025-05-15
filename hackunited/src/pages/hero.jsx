@@ -57,7 +57,7 @@ const data = {
 
 export default function Hero () {
     return (
-        <div className="flex flex-col items-center justify-center w-full min-h-screen -mt-15 lg:pt-0 sm:pt-18">
+        <div className="flex flex-col items-center justify-center w-full min-h-screen -mt-10 lg:pt-0 sm:pt-18">
             <div className="flex flex-col text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
