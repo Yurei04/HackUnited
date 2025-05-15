@@ -19,7 +19,7 @@ import {
 const components = [
     {
         title: "Home",
-        href: "#",
+        href: "/",
         description: "Welcome to the homepage where you can access all features and resources at a glance.",
     },
     {
@@ -29,7 +29,7 @@ const components = [
     },
     {
         title: "Team",
-        href: "#",
+        href: "/team",
         description: "Meet the team behind the project. Get to know the minds driving the mission forward.",
     },
     {
