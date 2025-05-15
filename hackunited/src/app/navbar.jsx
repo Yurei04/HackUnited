@@ -39,7 +39,7 @@ const components = [
     },
     {
         title: "Social",
-        href: "#",
+        href: "/social",
         description: "Create and analyze your resume for feedback, recommendations, and improvements.",
     },
     {
