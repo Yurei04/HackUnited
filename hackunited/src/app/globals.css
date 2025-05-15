@@ -7,6 +7,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+* {
+  scroll-behavior: smooth;
+}
+
+
 body {
   position: relative;
   margin: 0;
