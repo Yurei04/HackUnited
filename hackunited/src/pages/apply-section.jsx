@@ -77,79 +77,78 @@ export default function ApplySection () {
                 }}
                 viewport={{ once: true, amount: 0.4 }}
                 >   
-                <div className="max-w-4xl mx-auto p-6 space-y-12">
+                <div className="lg:max-w-4xl sm:max-w-xl mx-auto p-6 space-y-12">
+                    <Card className="border hover:border-purple-500 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5">
+                        <CardHeader>
+                            <CardTitle className="text-3xl font-semibold ">BENEFITS</CardTitle>
+                            <CardDescription>
+                                While our positions are currently unpaid, we make an effort to express our gratitude to volunteers at Hack United by providing benefits.
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                            <ul className="list-disc list-inside space-y-2 text-sm">
+                            <li>Service Hours*</li>
+                            <li>Custom Email &amp; Google Workspace Access (<code>yourname@hackunited.org</code>)</li>
+                            <li>Recognition (Resume, Recommendation Letters, LinkedIn Company, Etc)</li>
+                            <li>Gain access to an experienced team offering valuable advice/mentorship.</li>
+                            <li>Free Swag**</li>
+                            </ul>
 
-                <Card className="border hover:border-purple-500 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5">
-                    <CardHeader>
-                        <CardTitle className="text-3xl font-semibold ">BENEFITS</CardTitle>
-                        <CardDescription>
-                            While our positions are currently unpaid, we make an effort to express our gratitude to volunteers at Hack United by providing benefits.
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                        <ul className="list-disc list-inside space-y-2 text-sm">
-                        <li>Service Hours*</li>
-                        <li>Custom Email &amp; Google Workspace Access (<code>yourname@hackunited.org</code>)</li>
-                        <li>Recognition (Resume, Recommendation Letters, LinkedIn Company, Etc)</li>
-                        <li>Gain access to an experienced team offering valuable advice/mentorship.</li>
-                        <li>Free Swag**</li>
-                        </ul>
+                            <p className="text-sm italic text-muted-foreground">
+                                *Please note that the hours approved by Hack United may not be valid for certain awards. We recommend that you check with our team to confirm their eligibility.
+                            </p>
+                            <p className="text-sm italic text-muted-foreground">
+                                **Although we share the swag and merchandise we produce or receive from sponsors with our team, we cannot guarantee any swag for new members upon joining.
+                            </p>
+                        </CardContent>
+                    </Card>
 
-                        <p className="text-sm italic text-muted-foreground">
-                            *Please note that the hours approved by Hack United may not be valid for certain awards. We recommend that you check with our team to confirm their eligibility.
-                        </p>
-                        <p className="text-sm italic text-muted-foreground">
-                            **Although we share the swag and merchandise we produce or receive from sponsors with our team, we cannot guarantee any swag for new members upon joining.
-                        </p>
-                    </CardContent>
-                </Card>
+                    <Card className="border hover:border-purple-500 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5">
+                        <CardHeader>
+                            <CardTitle className="text-3xl font-semibold ">APPLY NOW</CardTitle>
+                            <CardDescription>
+                            If you're interested in applying for any of our positions, please fill out the email format below. We review applications regularly, so be sure to apply as soon as you can!
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4 text-sm">
+                            <p>
+                                We encourage you to be detailed in your responses, as it will help us assess your suitability for the role. Your answers will be treated with the utmost confidentiality and will solely be used for evaluating your application.
+                            </p>
+                            <p>
+                                To apply, please email <a href="mailto:jobs@hackunited.org" className="text-blue-600 underline">jobs@hackunited.org</a> with the following information:
+                            </p>
+                            <ul className="list-disc list-inside space-y-1">
+                            <li>Full Name:</li>
+                            <li>Email Address:</li>
+                            <li>Age:</li>
+                            <li>Country &amp; State of Residence:</li>
+                            <li>Resume (optional):</li>
+                            <li>LinkedIn Profile (optional):</li>
+                            <li>What position(s) are you applying for?</li>
+                            <li>Why are you interested in this volunteer position?</li>
+                            <li>What relevant skills or experiences do you possess that make you a suitable candidate?</li>
+                            <li>Have you volunteered for similar causes or organizations in the past? If so, please provide details.</li>
+                            <li>How much time are you able to commit to this volunteer role on a weekly or monthly basis?</li>
+                            <li>Are there any specific areas or projects within our organization that interest you?</li>
+                            </ul>
+                            <p className="text-sm italic text-muted-foreground">
+                            * We encourage you to be detailed in your responses, as it will help us assess your suitability for the role. Your answers will be treated with the utmost confidentiality and will solely be used for evaluating your application.
+                            </p>
 
-                <Card className="border hover:border-purple-500 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5">
-                    <CardHeader>
-                        <CardTitle className="text-3xl font-semibold ">APPLY NOW</CardTitle>
-                        <CardDescription>
-                        If you're interested in applying for any of our positions, please fill out the email format below. We review applications regularly, so be sure to apply as soon as you can!
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4 text-sm">
-                        <p>
-                            We encourage you to be detailed in your responses, as it will help us assess your suitability for the role. Your answers will be treated with the utmost confidentiality and will solely be used for evaluating your application.
-                        </p>
-                        <p>
-                            To apply, please email <a href="mailto:jobs@hackunited.org" className="text-blue-600 underline">jobs@hackunited.org</a> with the following information:
-                        </p>
-                        <ul className="list-disc list-inside space-y-1">
-                        <li>Full Name:</li>
-                        <li>Email Address:</li>
-                        <li>Age:</li>
-                        <li>Country &amp; State of Residence:</li>
-                        <li>Resume (optional):</li>
-                        <li>LinkedIn Profile (optional):</li>
-                        <li>What position(s) are you applying for?</li>
-                        <li>Why are you interested in this volunteer position?</li>
-                        <li>What relevant skills or experiences do you possess that make you a suitable candidate?</li>
-                        <li>Have you volunteered for similar causes or organizations in the past? If so, please provide details.</li>
-                        <li>How much time are you able to commit to this volunteer role on a weekly or monthly basis?</li>
-                        <li>Are there any specific areas or projects within our organization that interest you?</li>
-                        </ul>
-                        <p className="text-sm italic text-muted-foreground">
-                        * We encourage you to be detailed in your responses, as it will help us assess your suitability for the role. Your answers will be treated with the utmost confidentiality and will solely be used for evaluating your application.
-                        </p>
-
-                        <Button
-                            as="a"
-                            href="mailto:jobs@hackunited.org"
-                            variant="outline"
-                            className="mt-4 cursor-pointer"
-                        >
-                            Email Your Application
-                        </Button>
-                    </CardContent>
-                </Card>
+                            <Button
+                                as="a"
+                                href="mailto:jobs@hackunited.org"
+                                variant="outline"
+                                className="mt-4 cursor-pointer"
+                            >
+                                Email Your Application
+                            </Button>
+                        </CardContent>
+                    </Card>
                 </div>
                 </motion.div> 
                 <Link href="/" passHref>
-                    <Button as="a" variant="destructive" className="m-5 p-4 w-2xl cursor-pointer">
+                    <Button as="a" variant="destructive" className="m-5 p-4 lg:w-2xl sm:2-base cursor-pointer">
                         Back To Home
                     </Button>
                 </Link>
