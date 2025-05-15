@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -6,25 +8,41 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar"
+import { motion } from "framer-motion";
 
 export default function ApplySection () {
     return (
         <div className="flex flex-col w-full min-h-screen">
-            <div className="flex flex-col items-center justify-center gap-5">          
-                <h1 className="text-4xl sm:text-5xl lg:text-8xlr flex flex-row gap-5 items-center justify-center mt-10">
-                    <span className="text-transparent bg-clip-text text-6xl bg-gradient-to-r from-gray-400 to-purple-500">
-                        Join The Team
-                    </span>
+            <div className="flex flex-col items-center justify-center gap-5"> 
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                >       
+                    <h1 className="text-4xl sm:text-5xl lg:text-8xlr flex flex-row gap-5 items-center justify-center mt-10">
+                        <span className="text-transparent bg-clip-text text-6xl bg-gradient-to-r from-gray-400 to-purple-500">
+                            Join The Team
+                        </span>
 
-                </h1>
-                <p className="text-transparent bg-clip-text text-base text-center bg-gradient-to-r from-purple-300 to-purple-200">
-                    We are always looking for new additions to help run Hack United! <br/>
-                    Please read below for requirements, benefits, and application info. Any other questions? Dont hesitate to 
-                    <Link href="/" className="text-blue-700 underline">contact us!</Link>
-                </p>
+                    </h1>
+                    <p className="text-transparent bg-clip-text text-base text-center bg-gradient-to-r from-purple-300 to-purple-200">
+                        We are always looking for new additions to help run Hack United! <br/>
+                        Please read below for requirements, benefits, and application info. Any other questions? Dont hesitate to 
+                        <Link href="/" className="text-blue-700 underline">contact us!</Link>
+                    </p>
+                </motion.div> 
 
-
-
+                <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                    duration: 0.9,
+                    type: "spring",
+                    bounce: 0.2,
+                    delay: 0.1,
+                }}
+                viewport={{ once: true, amount: 0.6 }}
+                >   
                 <Card className="border hover:border-purple-500 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 overflow-hidden">
                     <CardHeader className="w-full flex flex-col items-center justify-center text-center">
                         <Avatar>
@@ -46,6 +64,19 @@ export default function ApplySection () {
                         ></iframe>
                     </CardContent>
                 </Card>
+                </motion.div> 
+
+                <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                    duration: 0.9,
+                    type: "spring",
+                    bounce: 0.2,
+                    delay: 0.1,
+                }}
+                viewport={{ once: true, amount: 0.4 }}
+                >   
                 <div className="max-w-4xl mx-auto p-6 space-y-12">
 
                 <Card className="border hover:border-purple-500 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5">
@@ -116,6 +147,7 @@ export default function ApplySection () {
                     </CardContent>
                 </Card>
                 </div>
+                </motion.div> 
                 <Link href="/" passHref>
                     <Button as="a" variant="destructive" className="m-5 p-4 w-2xl cursor-pointer">
                         Back To Home
