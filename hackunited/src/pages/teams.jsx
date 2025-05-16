@@ -168,7 +168,7 @@ function TeamSection({ title, members, cardsPerRow = 4 }) {
 
 export default function Teams() {
   return (
-    <div className="w-full min-h-screen p-10 space-y-16 items-center justify-center overflow-x-hidden">
+    <div className="w-full min-h-screen p-10 space-y-16 mt-15 items-center justify-center overflow-x-hidden">
       <TeamSection title="Chiefs" members={team.chiefs} cardsPerRow={3} />
       <TeamSection title="Heads" members={team.heads} cardsPerRow={4} />
       <TeamSection title="Officers" members={team.officers} cardsPerRow={4} />

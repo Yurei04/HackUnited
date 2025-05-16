@@ -7,25 +7,23 @@ import "@/app/globals.css";
 export default function SiteHeader() {
   return (
     <header
-      className="flex  h-(--header-height) shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)">
-      <div className="flex w-full items-center gap-1 px-4 lg:gap-2 lg:px-6">
-        <Separator orientation="vertical" className="mx-2 data-[orientation=vertical]:h-4" />
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-black/50 backdrop-blur-md rounded-2xl shadow-lg px-6 py-2"
+    >
+      <div className="flex items-center gap-4">
         <h1 className="text-base font-medium text-purple-200">Hack United</h1>
-        <div>
         <NavBar />
-        </div>
-        <div className="ml-auto flex items-center gap-2">
-          <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
-            <a
-              href="#"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="dark:text-foreground text-purple-200">
-              LinkedIn
-            </a>
-          </Button>
-        </div>
+        <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
+          <a
+            href="#"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-purple-200"
+          >
+            LinkedIn
+          </a>
+        </Button>
       </div>
     </header>
-  )
+  );
 }
+

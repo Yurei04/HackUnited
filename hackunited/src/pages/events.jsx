@@ -228,68 +228,71 @@ export default function Events () {
                 </h1>
             </div>
 
-            <div className="flex lg:flex-row sm:flex-col flex-1/4 items-center justify-center">
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-15">
                 {chartData.dataset.map((cards) => (
-                      console.log("Rendering card:", cards.title),
-                    <Card key={cards.id} className="rounded-4xl border hover:border-purple-500 isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5 sm:m-5">
-                        <CardHeader>
-                            <CardTitle className="text-purple-400 text-xl flex items-center gap-2">
-                            <Sparkles className="text-purple-300 h-5 w-5" />
-                            {cards.title}
-                            </CardTitle>
-                            <p className="text-sm text-purple-300 flex items-center gap-1">
-                            <Calendar className="h-4 w-4" />
-                            {cards.date}
-                            </p>
-                            <p className="text-sm text-purple-300">{cards.theme}</p>
-                        </CardHeader>
-                        <CardContent className="space-y-2 text-sm">
-                            <p className="flex items-center gap-2">
-                            <Users className="h-3 w-3 text-purple-300" />
-                            <strong>Participants:</strong> {cards.participats}
-                            </p>
-                            <p className="flex items-center gap-2">
-                            <FolderKanban className="h-4 w-4 text-purple-300" />
-                            <strong>Projects:</strong> {cards.projects}
-                            </p>
-                            <p className="flex items-center gap-2">
-                            <DollarSign className="h-4 w-4 text-purple-300" />
-                            <strong>Prize Pool:</strong> ${cards.prizePool}
-                            </p>
-                            <p className="flex items-center gap-2">
-                            <Handshake className="h-4 w-4 text-purple-300" />
-                            <strong>Sponsors:</strong> {cards.sponsors}
-                            </p>
-                            <p className="flex items-center gap-2">
-                            <BookOpen className="h-4 w-4 text-purple-300" />
-                            <strong>Workshops:</strong> {cards.workshop} ({cards.workshopAttendess} attendees)
-                            </p>
-                            <p className="flex items-center gap-2">
-                            <Gavel className="h-4 w-4 text-purple-300" />
-                            <strong>Judges:</strong> {cards.judges}
-                            </p>
+                    <Card
+                    key={cards.id}
+                    className="rounded-4xl border hover:border-purple-500 isolate aspect-video bg-black/50 shadow-lg ring-1 ring-black/5"
+                    >
+                    <CardHeader>
+                        <CardTitle className="text-purple-400 text-xl flex items-center gap-2">
+                        <Sparkles className="text-purple-300 h-5 w-5" />
+                        {cards.title}
+                        </CardTitle>
+                        <p className="text-sm text-purple-300 flex items-center gap-1">
+                        <Calendar className="h-4 w-4" />
+                        {cards.date}
+                        </p>
+                        <p className="text-sm text-purple-300">{cards.theme}</p>
+                    </CardHeader>
+                    <CardContent className="space-y-2 text-sm">
+                        <p className="flex items-center gap-2">
+                        <Users className="h-3 w-3 text-purple-300" />
+                        <strong>Participants:</strong> {cards.participats}
+                        </p>
+                        <p className="flex items-center gap-2">
+                        <FolderKanban className="h-4 w-4 text-purple-300" />
+                        <strong>Projects:</strong> {cards.projects}
+                        </p>
+                        <p className="flex items-center gap-2">
+                        <DollarSign className="h-4 w-4 text-purple-300" />
+                        <strong>Prize Pool:</strong> ${cards.prizePool}
+                        </p>
+                        <p className="flex items-center gap-2">
+                        <Handshake className="h-4 w-4 text-purple-300" />
+                        <strong>Sponsors:</strong> {cards.sponsors}
+                        </p>
+                        <p className="flex items-center gap-2">
+                        <BookOpen className="h-4 w-4 text-purple-300" />
+                        <strong>Workshops:</strong> {cards.workshop} ({cards.workshopAttendess} attendees)
+                        </p>
+                        <p className="flex items-center gap-2">
+                        <Gavel className="h-4 w-4 text-purple-300" />
+                        <strong>Judges:</strong> {cards.judges}
+                        </p>
 
-                            <div className="flex gap-4 pt-4">
-                            <Button
-                                className="bg-purple-600 hover:bg-purple-500 text-white flex items-center gap-2"
-                                onClick={() => window.open(cards.articleRecap, "_blank")}
-                            >
-                                <FileText className="h-4 w-4" />
-                                Article Recap <ArrowRight className="h-4 w-4" />
-                            </Button>
-                            <Button
-                                className="bg-purple-800 hover:bg-purple-700 text-white flex items-center gap-2"
-                                onClick={() => window.open(cards.devpost, "_blank")}
-                                variant={"outline"}
-                            >
-                                <Link2 className="h-4 w-4" />
-                                Devpost <ArrowRight className="h-4 w-4" />
-                            </Button>
-                            </div>
-                        </CardContent>
+                        <div className="flex flex-wrap gap-4 pt-4">
+                        <Button
+                            className="bg-purple-600 hover:bg-purple-500 text-white flex items-center gap-2"
+                            onClick={() => window.open(cards.articleRecap, "_blank")}
+                        >
+                            <FileText className="h-4 w-4" />
+                            Article Recap <ArrowRight className="h-4 w-4" />
+                        </Button>
+                        <Button
+                            className="bg-purple-800 hover:bg-purple-700 text-white flex items-center gap-2"
+                            onClick={() => window.open(cards.devpost, "_blank")}
+                            variant={"outline"}
+                        >
+                            <Link2 className="h-4 w-4" />
+                            Devpost <ArrowRight className="h-4 w-4" />
+                        </Button>
+                        </div>
+                    </CardContent>
                     </Card>
                 ))}
             </div>
+
         </motion.div>
         </div>
     )

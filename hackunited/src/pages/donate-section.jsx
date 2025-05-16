@@ -19,7 +19,7 @@ import {
 
 export default function DonateSection() {
     return (
-        <div className="flex flex-col w-full min-h-screen">
+        <div className="flex flex-col w-full min-h-screen mt-15">
         <div className="flex flex-col items-center justify-center gap-10 px-4 py-12">
             <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
