@@ -34,67 +34,67 @@ import {
 const chartData = {
   dataset: [
     {
-        id: 1,
-        title: "United Hacks V1",
-        date: "August, 2023",
-        theme: "Mental Health Theme",
-        participats: 400,
-        projects: 50,
-        prizePool: 5000,
-        sponsors: 10,
-        workshopAttendess: 100,
-        workshop: 10,
-        judges: "Industry professional Judges",
-        articleRecap: "https://blog.hackunited.org/united-hacks-recap-tackling-mental-health-challenges-through-technology",
-        devpost: "https://unitedhacks23.devpost.com/"
+      id: 1,
+      title: "United Hacks V1",
+      date: "August, 2023",
+      theme: "Mental Health Theme",
+      participats: 400,
+      projects: 50,
+      prizePool: 5000,
+      sponsors: 10,
+      workshopAttendess: 100,
+      workshop: 10,
+      judges: "Industry professional judges",
+      articleRecap: "https://blog.hackunited.org/united-hacks-recap-tackling-mental-health-challenges-through-technology",
+      devpost: "https://unitedhacks23.devpost.com/"
     },
-     {
-        id: 2,
-        title: "United Hacks V1",
-        date: "August, 2023",
-        theme: "Mental Health Theme",
-        participats: 400,
-        projects: 50,
-        prizePool: 5000,
-        sponsors: 10,
-        workshopAttendess: 100,
-        workshop: 10,
-        judges: "Industry professional Judges",
-        articleRecap: "https://blog.hackunited.org/united-hacks-recap-tackling-mental-health-challenges-through-technology",
-        devpost: "https://unitedhacks23.devpost.com/"
+    {
+      id: 2,
+      title: "United Hacks V2",
+      date: "January, 2024",
+      theme: "Resolutions Theme",
+      participats: 400,
+      projects: 75,
+      prizePool: 15000,
+      sponsors: 15,
+      workshopAttendess: 100,
+      workshop: 10,
+      judges: "Industry professional & student judges",
+      articleRecap: "https://blog.hackunited.org/united-hacks-v2-recap-new-resolutions-and-innovation",
+      devpost: "https://unitedhacks24.devpost.com/"
     },
-         {
-        id: 3,
-        title: "United Hacks V1",
-        date: "August, 2023",
-        theme: "Mental Health Theme",
-        participats: 400,
-        projects: 50,
-        prizePool: 5000,
-        sponsors: 10,
-        workshopAttendess: 100,
-        workshop: 10,
-        judges: "Industry professional Judges",
-        articleRecap: "https://blog.hackunited.org/united-hacks-recap-tackling-mental-health-challenges-through-technology",
-        devpost: "https://unitedhacks23.devpost.com/"
+    {
+      id: 3,
+      title: "United Hacks V3",
+      date: "September, 2024",
+      theme: "Communication Theme",
+      participats: 150,
+      projects: null, // Not mentioned
+      prizePool: 2000,
+      sponsors: null, // Not mentioned
+      workshopAttendess: 75,
+      workshop: 10,
+      judges: "Industry professional judges",
+      articleRecap: "https://blog.hackunited.org/united-hacks-v3-mini-hacks-and-communication-focus",
+      devpost: "https://unitedhacks-v3.devpost.com/"
     },
-         {
-        id: 4,
-        title: "United Hacks V1",
-        date: "August, 2023",
-        theme: "Mental Health Theme",
-        participats: 400,
-        projects: 50,
-        prizePool: 5000,
-        sponsors: 10,
-        workshopAttendess: 100,
-        workshop: 10,
-        judges: "Industry professional Judges",
-        articleRecap: "https://blog.hackunited.org/united-hacks-recap-tackling-mental-health-challenges-through-technology",
-        devpost: "https://unitedhacks23.devpost.com/"
-    },
-  ],
-}
+    {
+      id: 4,
+      title: "United Hacks V4",
+      date: "January, 2025",
+      theme: "Social Impact Theme",
+      participats: 400,
+      projects: 80,
+      prizePool: 10000,
+      sponsors: 10,
+      workshopAttendess: 100,
+      workshop: 10,
+      judges: "Industry professional judges",
+      articleRecap: "https://blog.hackunited.org/united-hacks-v4-social-impact-through-tech",
+      devpost: "https://unitedhacks-v4.devpost.com/"
+    }
+  ]
+};
 
 const current = {
     currentEvent: [
