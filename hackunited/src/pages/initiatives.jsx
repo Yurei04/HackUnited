@@ -44,7 +44,7 @@ const initiatives = [
 function InitiativeCard({ title, icon, items }) {
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-      <Card className="max-w-sm  isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500">
+      <Card className="max-w-xs  isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500">
         <CardContent className="p-10">
           <h2 className="text-3xl flex flex-row gap-4 items-center mb-4">
             {icon}
@@ -85,7 +85,7 @@ export default function Initiatives() {
         className="w-full"
       >
         <h1 className="text-4xl sm:text-5xl lg:text-7xl mb-10 text-center">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500">
+          <span className="text-transparent text-5xl bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500">
             Our Initiatives
           </span>
         </h1>

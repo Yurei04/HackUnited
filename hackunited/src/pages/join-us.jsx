@@ -20,7 +20,7 @@ export default function JoinUs () {
             <div className="flex flex-col items-center justify-center">
                 <div>
                     <h1 className="text-4xl sm:text-5xl lg:text-8xlr flex flex-row gap-5 items-center justify-center">
-                        <span className="text-transparent bg-clip-text text-6xl bg-gradient-to-r from-gray-400 to-purple-500">
+                        <span className="text-transparent bg-clip-text text-5xl bg-gradient-to-r from-gray-400 to-purple-500">
                             Join Our Community 
                         </span>
                     </h1>

@@ -43,7 +43,7 @@ function AnimatedCard({ children, direction = "left", rotate = "", justify = "st
 
 export default function Goals() {
   return (
-    <div className="flex flex-col w-full min-h-screen mt-20">
+    <div className="flex flex-col w-full min-h-screen mt-20" id="Goals">
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,14 +56,14 @@ export default function Goals() {
             viewport={{ once: true, amount: 0.1 }}
         >
         <h1 className="text-4xl sm:text-5xl lg:text-8xl flex flex-row gap-5 items-center justify-center">
-            <span className="text-transparent bg-clip-text text-6xl bg-gradient-to-r from-gray-400 to-purple-500">
-            Our Goals
+            <span className="text-transparent bg-clip-text text-5xl bg-gradient-to-r from-gray-400 to-purple-500">
+                Our Goals
             </span>
         </h1>
 
-        <div className="flex flex-col w-full gap-10 lg:p-50 sm:p-10">
+        <div className="flex flex-col w-full gap-10 lg:p-15 sm:p-10">
             <AnimatedCard direction="left" rotate="-rotate-4" justify="start">
-            <Card className="max-w-xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500">
+            <Card className="max-w-xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500 lg:ml-22">
                 <CardContent className="p-10">
                 <h1 className="text-4xl sm:text-5xl lg:text-8xl flex flex-row gap-5">
                     <CodeXml />
@@ -83,7 +83,7 @@ export default function Goals() {
             </AnimatedCard>
 
             <AnimatedCard direction="right" rotate="rotate-5" justify="end">
-            <Card className="max-w-xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500">
+            <Card className="max-w-xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500 lg:mr-22">
                 <CardContent className="p-10">
                 <h1 className="text-4xl sm:text-5xl lg:text-8xl flex flex-row gap-5">
                     <AppWindow />
@@ -103,7 +103,7 @@ export default function Goals() {
             </AnimatedCard>
 
             <AnimatedCard direction="left" rotate="-rotate-6" justify="start">
-                <Card className="max-w-xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500">
+                <Card className="max-w-xl isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 border hover:border-purple-500 lg:ml-22">
                     <CardContent className="p-10">
                     <h1 className="text-4xl sm:text-5xl lg:text-8xl flex flex-row gap-5">
                         <Users />

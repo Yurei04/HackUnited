@@ -62,7 +62,7 @@ export default function NavBar() {
                 <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
                     <Link
                     href="/"
-                    className="dark:text-foreground text-purple-200">
+                    className="dark:text-foreground text-purple-200 text-xs">
                     Home
                     </Link>
                 </Button>
@@ -70,18 +70,18 @@ export default function NavBar() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-            <NavigationMenuTrigger className="border text-purple-200 bg-transparent hover:border-purple-500 rounded-full px-4 py-2 transition-colors">
+            <NavigationMenuTrigger className="border text-purple-200 text-xs bg-transparent hover:border-purple-500 rounded-full px-4 py-2 transition-colors">
                 Getting started
             </NavigationMenuTrigger>
             <NavigationMenuContent className="bg-black text-white rounded-md shadow-lg">
-                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <ul className="grid gap-3 p-4 md:w-sm lg:w-lg lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                     <NavigationMenuLink asChild>
                     <a
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-purple-800 to-black p-6 no-underline outline-none hover:shadow-lg transition-shadow"
                         href="/"
                     >
-                        <div className="mb-2 mt-4 text-lg font-semibold text-purple-200">
+                        <div className="mt-4 text-lg font-semibold text-purple-200">
                         Hack United
                         </div>
                         <p className="text-sm leading-tight text-gray-400">
@@ -93,7 +93,7 @@ export default function NavBar() {
                 <ListItem href="#About" title="Introduction">
                     Learn more what Hack United is about.
                 </ListItem>
-                <ListItem href="#Tutorial" title="Hackathons">
+                <ListItem href="#Events" title="Hackathons">
                     What are the hackathons of Hack United
                 </ListItem>
                 <ListItem href="#Goals" title="Goal">
@@ -104,11 +104,11 @@ export default function NavBar() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-            <NavigationMenuTrigger className="border text-purple-200 bg-transparent hover:border-purple-500 rounded-full px-4 py-2 transition-colors">
+            <NavigationMenuTrigger className="border text-purple-200 text-xs bg-transparent hover:border-purple-500 rounded-full px-4 py-2 transition-colors">
                 Components
             </NavigationMenuTrigger>
             <NavigationMenuContent className="bg-black text-white rounded-md shadow-lg">
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
                 {components.map((component) => (
                     <ListItem
                     key={component.title}

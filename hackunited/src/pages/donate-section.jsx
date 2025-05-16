@@ -26,7 +26,7 @@ export default function DonateSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             >
-            <h1 className="text-center text-6xl sm:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500 mt-4">
+            <h1 className="text-center text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500 mt-4">
                 Donate
             </h1>
             </motion.div>
@@ -82,7 +82,7 @@ export default function DonateSection() {
                             View sponsor info
                         </span>
                         </DialogTrigger>
-                        <DialogContent className="space-y-4 text-sm text-left max-w-4xl">
+                        <DialogContent className="text-sm text-left max-w-4xl  bg-black/90 shadow-lg ring-1 ring-black/5 m-5">
                         <DialogTitle className="sr-only">Sponsor Information</DialogTitle>
                         <h2 className="text-lg font-bold text-white">Sponsor</h2>
                         <p className="text-white">
@@ -104,7 +104,7 @@ export default function DonateSection() {
                             </ul>
                         </div>
 
-                        <div>
+                        <div className="text-sm">
                             <h3 className="text-purple-300 font-semibold mt-4">Sponsor Our Hackathons</h3>
                             <ul className="list-disc list-inside text-white space-y-1">
                             <li>Positive brand exposure</li>
@@ -121,8 +121,8 @@ export default function DonateSection() {
                         </div>
 
                         <DialogClose asChild>
-                            <Button variant="secondary" className="mt-4">
-                            Back
+                            <Button variant="outline" className="mt-4">
+                                Back
                             </Button>
                         </DialogClose>
                         </DialogContent>

@@ -71,7 +71,7 @@ const socialIcons = [
 
 export default function Social() {
   return (
-    <div className="flex flex-col lg:flex-row w-full min-h-screen items-center justify-center gap-10 p-6">
+    <div className="flex flex-col lg:flex-row w-full min-h-screen items-center justify-center gap-10 p-6 m-17">
 
         <div className="flex flex-col items-center gap-6">
         <motion.div
@@ -79,7 +79,7 @@ export default function Social() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
         >
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl text-center">
+        <h1 className="text-5xl lg:text-5xl text-center">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500">
             Follow Us
             </span>

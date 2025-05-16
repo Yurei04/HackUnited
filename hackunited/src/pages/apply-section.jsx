@@ -20,15 +20,15 @@ export default function ApplySection () {
                     transition={{ duration: 0.5 }}
                 >       
                     <h1 className="text-4xl sm:text-5xl lg:text-8xlr flex flex-row gap-5 items-center justify-center mt-10">
-                        <span className="text-transparent bg-clip-text text-6xl bg-gradient-to-r from-gray-400 to-purple-500">
+                        <span className="text-transparent bg-clip-text text-5xl bg-gradient-to-r from-gray-400 to-purple-500">
                             Join The Team
                         </span>
 
                     </h1>
-                    <p className="text-transparent bg-clip-text text-base text-center bg-gradient-to-r from-purple-300 to-purple-200">
+                    <p className="text-transparent bg-clip-text text-sm text-center bg-gradient-to-r from-purple-300 to-purple-200">
                         We are always looking for new additions to help run Hack United! <br/>
-                        Please read below for requirements, benefits, and application info. Any other questions? Dont hesitate to 
-                        <Link href="/" className="text-blue-700 underline">contact us!</Link>
+                        Please read below for requirements, benefits, and application info. Any other questions? Dont hesitate to  
+                        <Link href="/" className="text-blue-700 underline"> contact us!</Link>
                     </p>
                 </motion.div> 
 
@@ -49,10 +49,10 @@ export default function ApplySection () {
                             <AvatarImage src="/images/HackUnited2.png" alt="@UH" />
                             <AvatarFallback>UH</AvatarFallback>
                         </Avatar>
-                            <h2 className="text-transparent bg-clip-text text-2xl bg-gradient-to-r from-gray-400 to-purple-500 underline">
+                            <h2 className="text-transparent bg-clip-text text-xl bg-gradient-to-r from-gray-400 to-purple-500 underline">
                                 OPEN POSITIONS
                             </h2>
-                            <p className="text-transparent bg-clip-text text-xl bg-gradient-to-r from-gray-400 to-purple-500 underline">
+                            <p className="text-transparent bg-clip-text text-lg bg-gradient-to-r from-gray-400 to-purple-500 underline">
                                 For requirements and more information, please read this document
                             </p>
                     </CardHeader>
@@ -80,7 +80,7 @@ export default function ApplySection () {
                 <div className="lg:max-w-4xl sm:max-w-xl mx-auto p-6 space-y-12">
                     <Card className="border hover:border-purple-500 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5">
                         <CardHeader>
-                            <CardTitle className="text-3xl font-semibold ">BENEFITS</CardTitle>
+                            <CardTitle className="text-4xl font-semibold ">BENEFITS</CardTitle>
                             <CardDescription>
                                 While our positions are currently unpaid, we make an effort to express our gratitude to volunteers at Hack United by providing benefits.
                             </CardDescription>
@@ -105,7 +105,7 @@ export default function ApplySection () {
 
                     <Card className="border hover:border-purple-500 isolate aspect-video rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5">
                         <CardHeader>
-                            <CardTitle className="text-3xl font-semibold ">APPLY NOW</CardTitle>
+                            <CardTitle className="text-4xl font-semibold ">APPLY NOW</CardTitle>
                             <CardDescription>
                             If you're interested in applying for any of our positions, please fill out the email format below. We review applications regularly, so be sure to apply as soon as you can!
                             </CardDescription>
@@ -134,15 +134,6 @@ export default function ApplySection () {
                             <p className="text-sm italic text-muted-foreground">
                             * We encourage you to be detailed in your responses, as it will help us assess your suitability for the role. Your answers will be treated with the utmost confidentiality and will solely be used for evaluating your application.
                             </p>
-
-                            <Button
-                                as="a"
-                                href="mailto:jobs@hackunited.org"
-                                variant="outline"
-                                className="mt-4 cursor-pointer"
-                            >
-                                Email Your Application
-                            </Button>
                         </CardContent>
                     </Card>
                 </div>
