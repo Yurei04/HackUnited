@@ -99,7 +99,7 @@ export default function Hero () {
                             <Button type="submit">Subscribe</Button>
                         </div>
                     </div>
-                    <div className="flex flex-col sm:flex-row sm:justify-center flex-wrap gap-6 p-4 max-w-screen-xl mx-auto">
+                    <div className="flex flex-col sm:flex-row sm:justify-center flex-wrap gap-6 p-4 w-screen-base mx-auto">
                         {data.dataCard.map((card) => (
                             <Card key={card.id} className={card.style}>
                                 <CardHeader>

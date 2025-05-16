@@ -44,7 +44,7 @@ export default function About () {
                         </motion.div>
                     </div>
                 </div>
-                <Card className="text-justify p-5 isolate aspect-video lg:w-[50%] sm:w-[90%]  rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 hover:border-purple-500">
+                <Card className="text-justify p-5 isolate aspect-video lg:w-4xl sm:w-lg  rounded-xl bg-black/50 shadow-lg ring-1 ring-black/5 hover:border-purple-500">
                     <CardContent>
                         <h1 className="text-xs sm:text-5xl lg:text-8xlr">
                             <span id="letters" className="text-transparent bg-clip-text text-base bg-gradient-to-r from-purple-300 to-purple-200">

@@ -140,7 +140,7 @@ export default function Events () {
                     </span>
                 </h1>
             </div>
-            <div className="min-h-[100vh]flex-1 rounded-xl md:min-h-min">
+            <div className="h-4xl flex-1 rounded-xl sm:h-lg">
                 {current.currentEvent.map((event) => (
                     <Card
                     key={event.id}
