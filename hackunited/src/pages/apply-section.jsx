@@ -19,6 +19,7 @@ import {
   Paintbrush,
   Code2,
 } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const hackUnitedPositions = [
   {
@@ -155,6 +156,7 @@ const filteredPositions =
             We are always looking for new additions to help run Hack United! Please read below for requirements, benefits, and application info. Any other questions? Don’t hesitate to
             <Link href="/" className="text-blue-700 underline ml-1">contact us!</Link>
           </p>
+          <Separator orientation="horizontal" className="m-4"/>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-6 w-full mt-8">

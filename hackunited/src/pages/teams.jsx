@@ -3,6 +3,7 @@
 import { useRef, useMemo } from "react"
 import { useInView, motion } from "framer-motion"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 
 export const team = {
@@ -118,16 +119,20 @@ function AnimatedCard({ children, direction = "left", justify = "start" }) {
   )
 }
 
-function TeamSection({ title, members, cardsPerRow = 4 }) {
+function TeamSection({ title, description, members, cardsPerRow = 4 }) {
   const rows = useMemo(() => {
     return Array.from({ length: Math.ceil(members.length / cardsPerRow) }, (_, i) =>
       members.slice(i * cardsPerRow, i * cardsPerRow + cardsPerRow)
-    )
-  }, [members, cardsPerRow])
+    );
+  }, [members, cardsPerRow]);
 
   return (
-    <div className="space-y-4 flex flex-col items-center justify-center">
-      <h2 className="text-3xl font-bold text-purple-300">{title}</h2>
+    <div className="space-y-6 flex flex-col items-center justify-center mb-10">
+      <div className="text-center space-y-2">
+        <h2 className="text-3xl font-bold text-purple-300">{title}</h2>
+        {description && <p className="text-purple-400 max-w-2xl text-sm">{description}</p>}
+      </div>
+
       <div className="flex flex-col items-center justify-center gap-8">
         {rows.map((row, rowIdx) => (
           <AnimatedCard
@@ -137,13 +142,15 @@ function TeamSection({ title, members, cardsPerRow = 4 }) {
           >
             <div
               className={`grid gap-10 ${
-                cardsPerRow === 3 ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3" : "grid-cols-1 sm:grid-cols-2 md:grid-cols-4"
+                cardsPerRow === 3
+                  ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+                  : "grid-cols-1 sm:grid-cols-2 md:grid-cols-4"
               }`}
             >
               {row.map((member, index) => (
                 <Card
                   key={index}
-                  className="bg-black/50 text-center border border-purple-800 hover:border-purple-200 shadow-md rounded-xl"
+                  className="bg-black/50 text-center border border-purple-800 shadow-md rounded-xl"
                 >
                   <CardHeader className="flex flex-col items-center">
                     <img
@@ -169,10 +176,50 @@ function TeamSection({ title, members, cardsPerRow = 4 }) {
 export default function Teams() {
   return (
     <div className="w-full min-h-screen p-10 space-y-16 mt-15 items-center justify-center overflow-x-hidden">
-      <TeamSection title="Chiefs" members={team.chiefs} cardsPerRow={3} />
-      <TeamSection title="Heads" members={team.heads} cardsPerRow={4} />
-      <TeamSection title="Officers" members={team.officers} cardsPerRow={4} />
-      <TeamSection title="Volunteers" members={team.volunteers} cardsPerRow={4} />
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <div className="p-2">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-6 text-center">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500">
+              Meet the Team
+            </span>
+          </h1>
+          <p className="text-center text-purple-200 max-w-2xl mx-auto mb-10">
+            Hack United is powered by passionate students and mentors from around the globe. Get to know the leaders and volunteers driving our mission forward.
+          </p>
+        </div>
+        <Separator orientation="horizontal" className="m-4"/>
+        <TeamSection
+          title="Chiefs"
+          description="Our executive team oversees Hack United’s vision, growth, and operations."
+          members={team.chiefs}
+          cardsPerRow={3}
+        />
+
+        <TeamSection
+          title="Heads"
+          description="Department leaders driving innovation and managing team functions."
+          members={team.heads}
+          cardsPerRow={4}
+        />
+
+        <TeamSection
+          title="Officers"
+          description="Support leads and execute core tasks within their departments."
+          members={team.officers}
+          cardsPerRow={4}
+        />
+
+        <TeamSection
+          title="Volunteers"
+          description="Dedicated contributors that make Hack United’s mission possible."
+          members={team.volunteers}
+          cardsPerRow={4}
+        />
+      </motion.div>
     </div>
   )
 }
