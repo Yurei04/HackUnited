@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -40,10 +41,12 @@ export default function Hero() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4 justify-center lg:justify-start">
-            <Button size="lg">Register For Hackathon</Button>
-            <Button variant="outline" size="lg">
-              Join Our Team
-            </Button>
+            <Link href="#events">
+              <Button size="lg" className="cursor-pointer">Register For Hackathon</Button>
+            </Link>
+            <Link href="/apply">
+              <Button variant="outline" size="lg" className="cursor-pointer">Join Our Team</Button>
+            </Link>
           </div>
         </motion.div>
         <motion.div

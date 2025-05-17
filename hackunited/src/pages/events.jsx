@@ -196,7 +196,7 @@ export default function Events() {
                 </div>
 
                 <Button
-                className="bg-purple-600 hover:bg-purple-500 text-white mt-2 w-fit"
+                className="bg-purple-600 hover:bg-purple-500 text-white mt-2 w-fit cursor-pointer"
                 onClick={() => window.open(event.devpost, "_blank")}
                 >
                 Register Now <ArrowRight className="ml-2 h-4 w-4" />

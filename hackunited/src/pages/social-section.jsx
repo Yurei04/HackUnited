@@ -18,6 +18,7 @@ import {
   BookOpen,
   MessageSquare,
 } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const cardData = [
   { title: "Discord", link: "https://discord.com/invite/example", icon: MessageSquare },
@@ -51,6 +52,7 @@ export default function Social() {
         <p className="text-center text-purple-200 max-w-2xl mx-auto">
           Stay in the loop with the latest from Hack United. Whether you want to follow updates, join our community, or explore our work—here’s where you’ll find us across the web.
         </p>
+        <Separator orientation="horizontal" className=""/>
       </motion.div>
       <div className="flex lg:flex-row sm:flex-col items-center justify-center gap-10 w-full">
         <motion.div

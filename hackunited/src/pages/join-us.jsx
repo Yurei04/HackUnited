@@ -84,7 +84,7 @@ export default function JoinUsAndContact() {
                         </p>
                         <Button
                             type="submit"
-                            className="w-full bg-purple-700 hover:bg-purple-600 text-white"
+                            className="w-full bg-purple-700 hover:bg-purple-600 text-white cursor-pointer"
                         >
                             Join Our Discord
                         </Button>
@@ -188,7 +188,7 @@ export default function JoinUsAndContact() {
 
                 <Button
                     type="submit"
-                    className="w-full bg-purple-700 hover:bg-purple-600 text-white"
+                    className="w-full bg-purple-700 hover:bg-purple-600 text-white cursor-pointer"
                 >
                     Contact
                 </Button>
