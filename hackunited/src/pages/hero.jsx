@@ -9,12 +9,14 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen w-full pt-28 overflow-x-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-black/60 via-black/40 to-black/60" />
-      <Image
-        src="/images/bkg8.png"
-        alt="Background"
-        fill
-        className="object-cover opacity-40 -z-20 pointer-events-none"
-      />
+        <Image
+            src="/images/bkg8.png"
+            alt="Background"
+            fill
+            className="object-cover opacity-50 -z-10 pointer-events-none"
+            priority
+        />
+
 
       <div className="container lg:p-15 sm:p-5 mx-auto px-6 lg:px-12 flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
         <motion.div

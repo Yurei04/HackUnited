@@ -7,6 +7,7 @@ CardFooter,
 CardHeader,
 CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -124,24 +125,24 @@ const current = {
 
 export default function Events() {
     return (
-        <section className="w-full min-h-screen py-20 px-6 bg-black/50">
+        <section className="w-full min-h-screen py-20 px-6 bg-black/50" id="events">
         <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
-  viewport={{ once: true }}
-  className="max-w-6xl mx-auto flex flex-col gap-12 items-center"
->
-  <div className="text-center">
-    <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-4">
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500">
-        Current Events
-      </span>
-    </h1>
-    <p className="text-purple-200 max-w-2xl mx-auto">
-      Stay updated on live hackathons, workshops, and community events.
-    </p>
-  </div>
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto flex flex-col gap-12 items-center"
+            >
+            <div className="text-center">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500">
+                    Current Events
+                </span>
+                </h1>
+                <p className="text-purple-200 max-w-2xl mx-auto">
+                Stay updated on live hackathons, workshops, and community events.
+                </p>
+            </div>
 
         {current.currentEvent.map((event) => (
             <motion.div
