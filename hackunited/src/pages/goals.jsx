@@ -43,7 +43,7 @@ function AnimatedCard({ children, direction = "left", rotate = "", justify = "st
 
 export default function Goals() {
   return (
-    <div className="flex flex-col w-full min-h-screen mt-20 px-4 sm:px-8 lg:px-16" id="Goals">
+    <div className="flex flex-col w-full min-h-screen lg:mt-10 sm:my-10 px-4 sm:px-8 lg:px-16" id="Goals">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -55,11 +55,19 @@ export default function Goals() {
         }}
         viewport={{ once: true, amount: 0.1 }}
       >
-        <h1 className="text-center text-4xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500 mb-16">
-          Our Goals
-        </h1>
+        <div className="m-5">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-6 text-center">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-purple-500">
+              Our Mission & Goals
+            </span>
+          </h1>
+          <p className="text-center text-purple-200 max-w-2xl mx-auto">
+            Hack United exists to empower young creators by providing inclusive access to education, collaboration, and career development. Our goal is to build a community where innovation thrives.
+          </p>
+        </div>
 
-        <div className="flex lg:flex-row md:flex-col gap-12 max-w-7xl mx-auto items-center justify-center">
+
+        <div className="flex flex-col sm:flex-col md:flex-row gap-12 max-w-7xl mx-auto items-center justify-center">
           <AnimatedCard direction="left" justify="start">
             <Card className="bg-black/60 backdrop-blur-md max-w-xl p-8">
               <CardContent>

@@ -15,7 +15,7 @@ import NavBar from "@/app/navbar";
 
 export default function HomePageLayout () {
     return (
-        <>
+        <div className="overflow-x-hidden">
         <NavBar />
         <Hero />
         <br />
@@ -25,8 +25,7 @@ export default function HomePageLayout () {
         <Goals />
         <Initiatives />
         <JoinUs />
-        <ContactPage />
         <Footer />
-        </>
+        </div>
     )
 }
