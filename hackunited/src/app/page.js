@@ -1,5 +1,5 @@
 
-import HomePageLayout from "../pages/home-page";
+import HomePageLayout from "@/app/home-page";
 
 
 export default function Home() {

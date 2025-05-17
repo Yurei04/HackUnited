@@ -9,23 +9,24 @@ import Initiatives from "@/pages/initiatives";
 import JoinUs from "@/pages/join-us";
 import ContactPage from "@/pages/contact-us";
 import Footer from "@/pages/footer";
+import NavBar from "@/app/navbar";
 
 
 
 export default function HomePageLayout () {
     return (
-            <SidebarProvider className="flex flex-col p-0 m-0 items-center justify-center overflow-x-hidden">
-                <SiteHeader />
-                <Hero />
-                <br />
-                <About />
-                <Community />
-                <Events />
-                <Goals />
-                <Initiatives />
-                <JoinUs />
-                <ContactPage />
-                <Footer />
-            </SidebarProvider>
+        <>
+        <NavBar />
+        <Hero />
+        <br />
+        <About />
+        <Community />
+        <Events />
+        <Goals />
+        <Initiatives />
+        <JoinUs />
+        <ContactPage />
+        <Footer />
+        </>
     )
 }
