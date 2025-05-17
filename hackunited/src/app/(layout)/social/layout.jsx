@@ -1,15 +1,15 @@
-import SiteHeader from "@/app/site-header";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import NavBar from "@/app/navbar";
 import Footer from "@/pages/footer";
 
 export default function SocialLayout({ children }) {
   return (
 
-      <SidebarProvider className="flex flex-col m-0 items-center justify-center">
-        <SiteHeader />
+    <div>
+        <NavBar />
         {children}
         <Footer />
-      </SidebarProvider>
+    </div>
+
 
   );
 }

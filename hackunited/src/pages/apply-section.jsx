@@ -197,7 +197,6 @@ const filteredPositions =
             className="lg:w-3/4 space-y-12"
           >
             <div className="bg-black/50 p-5 rounded-lg">
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl">
                     {filteredPositions.map((position, index) => (
                     <motion.div

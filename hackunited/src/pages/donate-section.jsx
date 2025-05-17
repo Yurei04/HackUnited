@@ -35,7 +35,7 @@ export default function DonateSection() {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center justify-center gap-8 text-center mt-4"
         >
-            <Card className="bg-black/40 border hover:border-purple-500 shadow-lg ring-1 ring-black/5 rounded-xl w-full max-w-xl mx-auto">
+            <Card className="bg-black/40 border shadow-lg ring-1 ring-black/5 rounded-xl w-full max-w-xl mx-auto">
                 <CardHeader>
                     <CardTitle className="text-purple-200 text-xl flex items-center gap-2">
                     <Building2 className="text-purple-400" /> Are You a Company or a Brand?
@@ -106,9 +106,9 @@ export default function DonateSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
                 viewport={{ once: true, amount: 0.4 }}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto" 
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto p-4" 
             >
-                <Card className="bg-black/40 shadow-lg ring-1 ring-black/5 rounded-xl">
+                <Card className="rounded-lg bg-white/5 shadow-xl backdrop-blur-lg border border-white/10l">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-purple-200">
                     <Heart className="text-purple-400" /> One-Time Donation
@@ -123,7 +123,7 @@ export default function DonateSection() {
                 </Card>
 
 
-                <Card className="bg-black/40 shadow-lg ring-1 ring-black/5 rounded-xl">
+                <Card className="rounded-lg bg-white/5 shadow-xl backdrop-blur-lg border border-white/10">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-purple-200">
                     <Star className="text-purple-400" /> Monthly Support
@@ -137,7 +137,7 @@ export default function DonateSection() {
                 </CardContent>
                 </Card>
 
-                <Card className="bg-black/40 shadow-lg ring-1 ring-black/5 rounded-xl">
+                <Card className="rounded-lg bg-white/5 shadow-xl backdrop-blur-lg border border-white/10">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-purple-200">
                     <Building2 className="text-purple-400" /> Become a Sponsor
