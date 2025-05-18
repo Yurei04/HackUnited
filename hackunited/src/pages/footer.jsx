@@ -52,7 +52,7 @@ export default function Footer() {
                 type="submit"
                 className="px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white text-sm rounded-lg transition-colors"
               >
-                Subscribe
+                Message Us
               </button>
             </form>
           </div>

@@ -7,13 +7,11 @@ import { Separator } from "@/components/ui/separator"
 
 
 export const team = {
-    "chiefs": [
+    "executives": [
       { "name": "Tejas C.", "type": "Founder + CEO", "img": "#", "alt": "Logo"},
       { "name": "Pranav A.", "type": "Chief Operating Officer", "img": "#", "alt": "Logo" },
       { "name": "Kavin A.", "type": "Chief Administrative Officer", "img": "#", "alt": "Logo" },
-    ],
-    "heads": [
-        { "name": "Kishan P.", "type": "Head of Community", "img": "#", "alt": "Logo" },
+            { "name": "Kishan P.", "type": "Head of Community", "img": "#", "alt": "Logo" },
       { "name": "Sahana P.", "type": "Head Outreach Manager", "img": "#", "alt": "Logo" },
       { "name": "Rehan R.", "type": "Head of Marketing", "img": "#", "alt": "Logo" },
       { "name": "Armaan P.", "type": "Head Blog Manager", "img": "#", "alt": "Logo" }
@@ -119,7 +117,7 @@ function AnimatedCard({ children, direction = "left", justify = "start" }) {
   )
 }
 
-function TeamSection({ title, description, members, cardsPerRow = 4 }) {
+function TeamSection({ title, description, members, cardsPerRow = 4, variant }) {
   const rows = useMemo(() => {
     return Array.from({ length: Math.ceil(members.length / cardsPerRow) }, (_, i) =>
       members.slice(i * cardsPerRow, i * cardsPerRow + cardsPerRow)
@@ -150,18 +148,34 @@ function TeamSection({ title, description, members, cardsPerRow = 4 }) {
               {row.map((member, index) => (
                 <Card
                   key={index}
-                  className="bg-black/50 text-center border border-purple-800 shadow-md rounded-xl"
+                  className={`bg-black/50 text-center border border-purple-800 shadow-md rounded-xl ${
+                    variant === "compact" ? "scale-90 p-2" : ""
+                  }`}
                 >
                   <CardHeader className="flex flex-col items-center">
                     <img
                       src={member.img}
                       alt={member.alt}
-                      className="w-20 h-20 object-cover rounded-full mb-2 bg-black/50"
+                      className={`object-cover rounded-full mb-2 bg-black/50 ${
+                        variant === "compact" ? "w-16 h-16" : "w-20 h-20"
+                      }`}
                     />
-                    <CardTitle className="text-xl text-purple-100">{member.name}</CardTitle>
+                    <CardTitle
+                      className={`text-purple-100 ${
+                        variant === "compact" ? "text-base" : "text-xl"
+                      }`}
+                    >
+                      {member.name}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-base text-purple-400">{member.type}</p>
+                    <p
+                      className={`text-purple-400 ${
+                        variant === "compact" ? "text-sm" : "text-base"
+                      }`}
+                    >
+                      {member.type}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -193,16 +207,9 @@ export default function Teams() {
         </div>
         <Separator orientation="horizontal" className="m-4"/>
         <TeamSection
-          title="Chiefs"
+          title="Executives"
           description="Our executive team oversees Hack United’s vision, growth, and operations."
-          members={team.chiefs}
-          cardsPerRow={3}
-        />
-
-        <TeamSection
-          title="Heads"
-          description="Department leaders driving innovation and managing team functions."
-          members={team.heads}
+          members={team.executives}
           cardsPerRow={4}
         />
 
@@ -214,10 +221,11 @@ export default function Teams() {
         />
 
         <TeamSection
-          title="Volunteers"
+          title="Previous Volunteers"
           description="Dedicated contributors that make Hack United’s mission possible."
           members={team.volunteers}
           cardsPerRow={4}
+          variant="compact"
         />
       </motion.div>
     </div>

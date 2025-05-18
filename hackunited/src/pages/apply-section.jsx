@@ -1,11 +1,22 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter
+} from "@/components/ui/dialog";
+
 
 import {
   Megaphone,
@@ -26,108 +37,235 @@ const hackUnitedPositions = [
     category: "Marketing",
     title: "Social Media Manager",
     icon: Megaphone,
-    description: `
-      Frequently post on platforms like X/Twitter, Instagram, and Threads.
-      Collaborate with Graphic Designers to post high-quality content.
-      Grow followers by being consistently active on assigned platform(s).
-    `,
+    description: `Frequently post on platforms like X/Twitter, Instagram, and Threads.`,
+    requirements: [
+      "Familiarity with major social media platforms",
+      "Strong writing and communication skills",
+      "Ability to coordinate with design/content teams"
+    ],
+    responsibilities: [
+      "Create and schedule posts consistently",
+      "Collaborate with graphic designers to align visuals",
+      "Monitor and grow follower base"
+    ],
+    benefits: [
+      "Boost your digital marketing portfolio",
+      "Work with a collaborative creative team",
+      "Real-world brand exposure experience"
+    ]
   },
   {
     category: "Marketing",
     title: "Short Form Content Creator",
     icon: Video,
-    description: `
-      Create engaging videos for Instagram Reels, TikTok, and YouTube Shorts.
-      Stay on top of trends to maximize reach and engagement.
-      Bonus: Editing experience with tools for reels.
-    `,
+    description: `Create engaging videos for Instagram Reels, TikTok, and YouTube Shorts.`,
+    requirements: [
+      "Basic video editing skills",
+      "Awareness of short-form content trends",
+      "Creative storytelling ability"
+    ],
+    responsibilities: [
+      "Produce trend-driven videos regularly",
+      "Edit content to fit platform guidelines",
+      "Collaborate with marketing and design team"
+    ],
+    benefits: [
+      "Build your video portfolio",
+      "Get credit on public content",
+      "Experiment with creative freedom"
+    ]
   },
   {
     category: "Marketing",
     title: "Discord Promoter",
     icon: Users,
-    description: `
-      Promote Hack United server using provided methods.
-      Engage with new communities and form STEM server partnerships.
-      Post actively in promotion channels and attract members.
-    `,
+    description: `Promote Hack United server using provided methods.`,
+    requirements: [
+      "Strong communication and outreach skills",
+      "Knowledge of Discord servers and communities",
+      "Comfortable with promotion and networking"
+    ],
+    responsibilities: [
+      "Join and engage with niche communities",
+      "Promote Hack United in allowed channels",
+      "Form partnerships with other STEM servers"
+    ],
+    benefits: [
+      "Hands-on digital marketing experience",
+      "Build networking and promotion skills",
+      "Direct impact on community growth"
+    ]
   },
   {
     category: "Human Resources",
     title: "Talent Acquisition Manager",
     icon: UserPlus,
-    description: `
-      Develop recruitment strategies, screen resumes, and conduct interviews.
-      Manage hiring processes and improve recruitment based on metrics.
-      Build positive candidate relationships.
-    `,
+    description: `Develop recruitment strategies and conduct interviews.`,
+    requirements: [
+      "Organizational and people skills",
+      "Experience or interest in HR practices",
+      "Attention to detail with applications"
+    ],
+    responsibilities: [
+      "Source and review applicants",
+      "Schedule and conduct interviews",
+      "Refine recruitment strategies"
+    ],
+    benefits: [
+      "Experience in a leadership role",
+      "HR and people operations exposure",
+      "Develop professional communication skills"
+    ]
   },
   {
     category: "Human Resources",
     title: "Outreach Manager",
     icon: Mail,
-    description: `
-      Reach new audiences by contacting entrepreneurs, sponsors, media, and companies.
-      Form partnerships and secure backing for Hack United.
-    `,
+    description: `Contact entrepreneurs, sponsors, and media to form partnerships.`,
+    requirements: [
+      "Excellent email writing and communication skills",
+      "Ability to identify and pitch to potential partners",
+      "Professionalism and persistence"
+    ],
+    responsibilities: [
+      "Draft and send outreach communications",
+      "Negotiate and form collaborations",
+      "Report outcomes and opportunities to the team"
+    ],
+    benefits: [
+      "Real-world fundraising and outreach experience",
+      "Expand your professional network",
+      "Boost your communication and sales skills"
+    ]
   },
   {
     category: "Community",
     title: "Community Team Member",
     icon: Users,
-    description: `
-      Boost engagement on Discord and beyond.
-      Moderate discussions and maintain inclusive environments.
-      Update community features like polls and challenges.
-    `,
+    description: `Boost engagement and maintain inclusive environments.`,
+    requirements: [
+      "Friendly and welcoming attitude",
+      "Moderation experience is a plus",
+      "Active presence in community platforms"
+    ],
+    responsibilities: [
+      "Moderate discussions and events",
+      "Run challenges and polls",
+      "Keep the community active and inclusive"
+    ],
+    benefits: [
+      "Be a core part of Hack United culture",
+      "Strengthen moderation and event skills",
+      "Help shape the community experience"
+    ]
   },
   {
     category: "Community",
     title: "Article Writer",
     icon: FileText,
-    description: `
-      Write 1-2 page informative articles for https://blog.hackunited.org.
-      Research trending topics and tailor content for teens.
-      AI tools allowed — but keep it human-like!
-    `,
+    description: `Write articles for https://blog.hackunited.org.`,
+    requirements: [
+      "Strong writing and research skills",
+      "Ability to simplify complex topics",
+      "Familiarity with teen tech trends"
+    ],
+    responsibilities: [
+      "Publish 1–2 page blog articles regularly",
+      "Research and source relevant topics",
+      "Edit for readability and engagement"
+    ],
+    benefits: [
+      "Get published on a public blog",
+      "Showcase your writing to a broad audience",
+      "Use AI tools with editorial freedom"
+    ]
   },
   {
     category: "Technology",
     title: "Web Developer",
     icon: Globe,
-    description: `
-      Maintain Hack United websites and add interactive features.
-      Required: HTML/CSS/JS. Bonus: React, Tailwind, Node.js, Firebase.
-    `,
+    description: `Maintain Hack United websites and add interactive features.`,
+    requirements: [
+      "Proficiency in HTML, CSS, and JavaScript",
+      "Experience with React and Tailwind is a bonus",
+      "Basic understanding of backend tools (Node.js, Firebase)"
+    ],
+    responsibilities: [
+      "Update and maintain existing sites",
+      "Implement new features as needed",
+      "Collaborate with the tech and design teams"
+    ],
+    benefits: [
+      "Hands-on experience with real-world projects",
+      "Opportunity to innovate and design",
+      "Build a strong GitHub portfolio"
+    ]
   },
   {
     category: "Technology",
     title: "Discord Bot Developer",
     icon: Bot,
-    description: `
-      Develop and optimize Discord bots using discord.js or discord.py.
-      Monitor and enhance bot functionality and uptime.
-    `,
+    description: `Develop and optimize bots using discord.js or discord.py.`,
+    requirements: [
+      "Familiarity with Discord API",
+      "Experience in JavaScript or Python",
+      "Debugging and deployment skills"
+    ],
+    responsibilities: [
+      "Create and enhance bot functionality",
+      "Ensure uptime and usability",
+      "Add features based on team input"
+    ],
+    benefits: [
+      "Build real-world bots used by a community",
+      "Work on innovative bot features",
+      "Open-source contributions and visibility"
+    ]
   },
   {
     category: "Technology",
     title: "Graphics Designer",
     icon: Paintbrush,
-    description: `
-      Create designs for events, merch, social media, and more.
-      Use your favorite software. Bonus: Figma experience.
-    `,
+    description: `Create designs for events, merch, and social media.`,
+    requirements: [
+      "Proficiency with a design tool (Photoshop, Illustrator, etc.)",
+      "Creativity and visual storytelling skills",
+      "Figma knowledge is a bonus"
+    ],
+    responsibilities: [
+      "Design visual assets for various campaigns",
+      "Work with marketing and web teams",
+      "Ensure branding consistency"
+    ],
+    benefits: [
+      "Build a strong visual portfolio",
+      "See your designs used in public",
+      "Creative freedom and team support"
+    ]
   },
   {
     category: "Technology",
     title: "Technical Team",
     icon: Code2,
-    description: `
-      Offer coding help in Discord, build coding challenges, and guide with AI tools.
-      Recommended: Python, Java, or C++.
-    `,
-  },
+    description: `Offer coding help, build challenges, and guide peers.`,
+    requirements: [
+      "Solid foundation in Python, Java, or C++",
+      "Problem-solving and teaching skills",
+      "Interest in community-driven tech"
+    ],
+    responsibilities: [
+      "Assist users with programming questions",
+      "Develop fun and engaging coding challenges",
+      "Guide others in using AI coding tools"
+    ],
+    benefits: [
+      "Improve leadership and mentorship skills",
+      "Sharpen your coding fundamentals",
+      "Make a positive impact on the coding community"
+    ]
+  }
 ];
+
 
 const categories = ["All", ...Array.from(new Set(hackUnitedPositions.map((p) => p.category)))];
 
@@ -142,7 +280,7 @@ const filteredPositions =
     : hackUnitedPositions.filter((p) => p.category === selectedCategory);
         
   return (
-    <div className="flex flex-col w-full min-h-screen mt-15 px-4 lg:px-20">
+    <div className="flex flex-col w-full min-h-screen mt-15 mb-4 py-4 lg:px-20">
       <div className="flex flex-col items-center justify-center gap-5">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -204,74 +342,105 @@ const filteredPositions =
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
                     >
-                    <Card
-                        className="rounded-3xl bg-white/5 shadow-xl backdrop-blur-lg border border-white/10 w-full h-full"
-                    >
-                        <CardHeader className="pb-2">
-                            <CardTitle className="text-xl text-purple-200">{position.title}</CardTitle>
-                            <p className="text-sm text-purple-400 italic">{position.category}</p>
-                        </CardHeader>
-                        <CardContent className="text-sm text-purple-300 whitespace-pre-line">
+                    <Card className="rounded-3xl bg-white/5 shadow-xl backdrop-blur-lg border border-white/10 w-full h-full">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-xl text-purple-200">{position.title}</CardTitle>
+                        <p className="text-sm text-purple-400 italic">{position.category}</p>
+                      </CardHeader>
+                      <CardContent className="text-sm text-purple-300 whitespace-pre-line">
                         {position.description.trim()}
-                        </CardContent>
+                      </CardContent>
+                      <CardFooter className="mt-auto">
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button variant="outline" className="text-purple-400 hover:text-purple-200 text-sm cursor-pointer">
+                              Learn More
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-lg bg-black border border-white/10">
+                            <DialogHeader>
+                              <DialogTitle className="text-purple-100 text-xl">{position.title}</DialogTitle>
+                              <DialogDescription className="text-purple-400">{position.category}</DialogDescription>
+                            </DialogHeader>
+                            <div className="text-sm text-purple-200 space-y-3">
+                              <div>
+                                <p className="font-semibold text-purple-400">Description:</p>
+                                <p>{position.description.trim()}</p>
+                              </div>
+                              <div>
+                                <p className="font-semibold text-purple-400">Requirements:</p>
+                                <ul className="list-disc list-inside text-purple-300">
+                                  {position.requirements?.map((req, idx) => (
+                                    <li key={idx}>{req}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div>
+                                <p className="font-semibold text-purple-400">Responsibilities:</p>
+                                <ul className="list-disc list-inside text-purple-300">
+                                  {position.responsibilities?.map((res, idx) => (
+                                    <li key={idx}>{res}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div>
+                                <p className="font-semibold text-purple-400">Benefits:</p>
+                                <ul className="list-disc list-inside text-purple-300">
+                                  {position.benefits?.map((ben, idx) => (
+                                    <li key={idx}>{ben}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <p className="italic text-purple-400 text-xs pt-2">
+                                Note: This is a volunteer position and may require time commitment.
+                              </p>
+                            </div>
+                            <Dialog>
+                              <DialogTrigger asChild>
+                                <Button variant="outline" className="text-purple-400 hover:text-purple-200 text-sm cursor-pointer">
+                                  Apply Now
+                                </Button>
+                              </DialogTrigger>
+                              <DialogContent className="max-w-lg bg-black border border-white/10">
+                                <DialogHeader>
+                                  <DialogTitle className="text-purple-100 text-xl">Apply Now! Contact Us</DialogTitle>
+                                  <DialogDescription className="text-purple-400"> 
+                                        Please email{" "}
+                                        <a href="mailto:jobs@hackunited.org" className="text-blue-400 underline">
+                                        jobs@hackunited.org
+                                        </a>{" "}
+                                        with the following details:
+                                  </DialogDescription>
+                                </DialogHeader>
+                                  <Card className="bg-black/50 shadow-lg ring-1 ring-black/5 rounded-2xl flex-1 flex flex-col">
+                                    <CardContent className="text-sm text-purple-300 flex-1">
+                                    <ul className="list-disc list-inside space-y-1">
+                                        <li>Full Name</li>
+                                        <li>Email Address</li>
+                                        <li>Age</li>
+                                        <li>Country & State</li>
+                                        <li>Resume (optional)</li>
+                                        <li>LinkedIn Profile (optional)</li>
+                                        <li>What position(s) are you applying for?</li>
+                                        <li>Why are you interested in this position?</li>
+                                        <li>Relevant skills or experience</li>
+                                        <li>Past volunteer experience</li>
+                                        <li>Time commitment available</li>
+                                        <li>Any projects or areas you're passionate about?</li>
+                                    </ul>
+                                    </CardContent>
+                                </Card>
+                              </DialogContent>
+                            </Dialog>
+                          </DialogContent>
+                          <DialogFooter> 
+                          </DialogFooter>
+                        </Dialog>
+                      </CardFooter>
                     </Card>
                     </motion.div>
                     ))}
                 </div>
-            </div>
-
-            <div className="w-full flex flex-col lg:flex-row gap-6 items-stretch mb-6">
-                <Card className="bg-black/50 shadow-lg ring-1 ring-black/5 rounded-2xl flex-1 flex flex-col">
-                    <CardHeader className="pb-2">
-                    <CardTitle className="text-3xl text-purple-200">Benefits</CardTitle>
-                    <CardDescription className="text-purple-400">
-                        While our positions are unpaid, we offer meaningful perks to our volunteers.
-                    </CardDescription>
-                    </CardHeader>
-                    <CardContent className="text-sm space-y-2 text-purple-300 flex-1">
-                    <ul className="list-disc list-inside">
-                        <li>Service Hours*</li>
-                        <li>Custom Email & Google Workspace Access</li>
-                        <li>Recognition (Resume, Recommendation Letters, Certificates, etc)</li>
-                        <li>Team mentorship and support</li>
-                        <li>Free Swag**</li>
-                    </ul>
-                    <p className="italic text-xs text-purple-500 pt-2">
-                        * Hours may not qualify for all awards. Confirm with your program.
-                    </p>
-                    <p className="italic text-xs text-purple-500">
-                        ** Swag not guaranteed for every member upon joining.
-                    </p>
-                    </CardContent>
-                </Card>
-                <Card className="bg-black/50 shadow-lg ring-1 ring-black/5 rounded-2xl flex-1 flex flex-col">
-                    <CardHeader className="pb-2">
-                    <CardTitle className="text-3xl text-purple-200">Apply Now</CardTitle>
-                    <CardDescription className="text-purple-400">
-                        Please email{" "}
-                        <a href="mailto:jobs@hackunited.org" className="text-blue-400 underline">
-                        jobs@hackunited.org
-                        </a>{" "}
-                        with the following details:
-                    </CardDescription>
-                    </CardHeader>
-                    <CardContent className="text-sm text-purple-300 flex-1">
-                    <ul className="list-disc list-inside space-y-1">
-                        <li>Full Name</li>
-                        <li>Email Address</li>
-                        <li>Age</li>
-                        <li>Country & State</li>
-                        <li>Resume (optional)</li>
-                        <li>LinkedIn Profile (optional)</li>
-                        <li>What position(s) are you applying for?</li>
-                        <li>Why are you interested in this position?</li>
-                        <li>Relevant skills or experience</li>
-                        <li>Past volunteer experience</li>
-                        <li>Time commitment available</li>
-                        <li>Any projects or areas you're passionate about?</li>
-                    </ul>
-                    </CardContent>
-                </Card>
             </div>
           </motion.div>
         </div>

@@ -36,6 +36,13 @@ export default function NavBar() {
               <Link href={link.href}>{link.title}</Link>
             </Button>
           ))}
+          <Button
+              variant="ghost"
+              size="sm"
+              className="text-sm border border-purple-500 hover:border-purple-300 transition-colors cursor-pointer"
+            >
+              <Link href="https://unitedhacks.hackunited.org/">Hackathon</Link>
+          </Button>
         </div>
 
         <div className="md:hidden">
@@ -64,8 +71,16 @@ export default function NavBar() {
               <Link href={link.href}>{link.title}</Link>
             </Button>
           ))}
+          <Button
+              variant="ghost"
+              size="sm"
+              className="w-full justify-start text-sm border hover:border-purple-100 hover:bg-purple-900 transition-colors cursor-pointer"
+            >
+              <Link href="https://unitedhacks.hackunited.org/">Hackathon</Link>
+          </Button>
         </div>
       )}
+
     </nav>
   )
 }
