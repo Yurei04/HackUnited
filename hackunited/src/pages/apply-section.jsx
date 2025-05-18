@@ -280,7 +280,7 @@ const filteredPositions =
     : hackUnitedPositions.filter((p) => p.category === selectedCategory);
         
   return (
-    <div className="flex flex-col w-full min-h-screen mt-15 mb-4 py-4 lg:px-20">
+    <div className="flex flex-col w-full min-h-screen mt-22 mb-4 py-4 lg:px-20">
       <div className="flex flex-col items-center justify-center gap-5">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}

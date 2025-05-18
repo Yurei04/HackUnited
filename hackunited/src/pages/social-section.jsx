@@ -1,15 +1,14 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   FaLinkedin,
   FaInstagram,
   FaTwitter,
-  FaGithub
+  FaGithub,
 } from "react-icons/fa";
 import {
   Mail,
@@ -35,9 +34,25 @@ const socialIcons = [
   { icon: <FaGithub />, link: "https://github.com", label: "GitHub" },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.15,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
+
 export default function Social() {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true });
+
   return (
-    <div className="flex flex-col w-full min-h-screen items-center justify-center gap-10 p-6 mt-16">
+    <div className="flex flex-col w-full min-h-screen items-center justify-center gap-10 p-6 mt-28">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -52,10 +67,19 @@ export default function Social() {
         <p className="text-center text-purple-200 max-w-2xl mx-auto">
           Stay in the loop with the latest from Hack United. Whether you want to follow updates, join our community, or explore our work—here’s where you’ll find us across the web.
         </p>
-        <Separator orientation="horizontal" className=""/>
+        <Separator orientation="horizontal" />
       </motion.div>
-      <div className="flex lg:flex-row sm:flex-col items-center justify-center gap-10 w-full">
-          <div className="flex flex-col w-lg rounded-2xl p-6 gap-4 mt-4 flex-wrap justify-center bg-black/50">
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="flex lg:flex-row sm:flex-col items-center justify-center gap-10 w-full">
+          <div
+            ref={containerRef}
+            className="flex flex-col w-lg rounded-2xl p-6 gap-4 mt-4 flex-wrap justify-center bg-black/50"
+          >
             {cardData.map(({ title, link, icon: Icon }, index) => (
               <Link
                 key={index}
@@ -65,38 +89,37 @@ export default function Social() {
                 className="no-underline"
               >
                 <motion.div
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="bg-black/40 border border-purple-700 rounded-2xl p-5 shadow-lg backdrop-blur-md flex flex-row items-center justify-between text-center hover:border-purple-500 transition cursor-pointer"
+                  custom={index}
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate={isInView ? "visible" : "hidden"}
+                  className="stat-card bg-black/40 border border-purple-700 rounded-2xl p-5 shadow-lg backdrop-blur-md flex flex-row items-center justify-between text-center hover:border-purple-500 transition cursor-pointer"
                 >
                   <h2 className="text-lg font-semibold text-white">{title}</h2>
                   <div className="rounded-full bg-purple-700/20 text-purple-400 p-1">
                     <Icon size={20} />
                   </div>
                 </motion.div>
-
               </Link>
             ))}
 
-            <div className="flex flex-row items-center justify-center gap-10">
+            <div className="flex flex-row items-center justify-center gap-10 pt-4">
               {socialIcons.map(({ icon, link, label }, idx) => (
-              <Link key={idx} href={link} target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="w-8 h-8 text-base text-white hover:text-purple-500 transition cursor-pointer"
-                  aria-label={label}
-                >
-                  {icon}
-                </Button>
-
-              </Link>
-            ))}
+                <Link key={idx} href={link} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="w-8 h-8 text-base text-white hover:text-purple-500 transition cursor-pointer"
+                    aria-label={label}
+                  >
+                    {icon}
+                  </Button>
+                </Link>
+              ))}
             </div>
-            
           </div>
-
-      </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

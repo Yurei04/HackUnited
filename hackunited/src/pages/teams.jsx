@@ -189,7 +189,7 @@ function TeamSection({ title, description, members, cardsPerRow = 4, variant }) 
 
 export default function Teams() {
   return (
-    <div className="w-full min-h-screen p-10 space-y-16 mt-15 items-center justify-center overflow-x-hidden">
+    <div className="w-full min-h-screen p-10 space-y-16 mt-26 items-center justify-center overflow-x-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
